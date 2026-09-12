@@ -1,0 +1,241 @@
+/* ==========================================================================
+   ENHANCED MOBILE RESPONSIVENESS (320px - 1440px+)
+   Strictly scaling existing design, maintaining visual identity
+   ========================================================================== */
+
+/* --- 1440px+ (Ultra Wide) --- */
+@media (min-width: 1440px) {
+  .container, .navbar {
+    max-width: 1440px;
+  }
+}
+
+/* --- 1280px (Laptops/Desktops) --- */
+@media (max-width: 1280px) {
+  .container, .navbar {
+    width: 90%;
+  }
+}
+
+/* --- 1024px (Large Tablets / Small Laptops) --- */
+@media (max-width: 1024px) {
+  .container, .navbar {
+    width: 92%;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-grid, .about-grid, .projects-grid {
+    gap: 2rem;
+  }
+}
+
+/* --- 768px (Tablets) --- */
+@media (max-width: 768px) {
+  .container, .navbar {
+    width: 95%;
+  }
+  
+  .hero-section {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-code-wrapper {
+    transform: scale(0.85);
+    transform-origin: center center;
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .section-heading {
+    font-size: 2.2rem;
+  }
+  
+  .exp-card {
+    padding: 1.5rem;
+  }
+}
+
+/* --- 425px (Large Phones) --- */
+@media (max-width: 425px) {
+  .container, .navbar {
+    width: 100%;
+    padding: 0 1.2rem;
+  }
+  
+  .hero-section {
+    padding-top: 7.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-code-wrapper {
+    transform: scale(0.75);
+    transform-origin: top center;
+    margin-bottom: -75px;
+    margin-top: 1rem;
+  }
+  
+  .code-window-container {
+    width: 440px !important;
+    max-width: none !important;
+  }
+  
+  .section-heading {
+    font-size: 1.8rem;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .skills-heading {
+    font-size: 2rem;
+  }
+  
+  .exp-role {
+    font-size: 1.15rem;
+  }
+  
+  .photo-frame-ring {
+    width: 270px !important;
+    height: 270px !important;
+  }
+  
+  .photo-glow-aura {
+    width: 290px !important;
+    height: 290px !important;
+  }
+  
+  .skills-wheel-container {
+    transform: scale(0.75);
+    transform-origin: top center;
+    margin-bottom: -80px;
+  }
+}
+
+/* --- 375px (Medium Phones) --- */
+@media (max-width: 375px) {
+  .container, .navbar {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero-code-wrapper {
+    transform: scale(0.65);
+    margin-bottom: -110px;
+  }
+  
+  .photo-frame-ring {
+    width: 240px !important;
+    height: 240px !important;
+  }
+  
+  .photo-glow-aura {
+    width: 260px !important;
+    height: 260px !important;
+  }
+  
+  .skills-wheel-container {
+    transform: scale(0.65);
+    margin-bottom: -110px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* --- 320px (Small Phones) --- */
+@media (max-width: 320px) {
+  .container, .navbar {
+    padding: 0 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .hero-code-wrapper {
+    transform: scale(0.55);
+    margin-bottom: -140px;
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .photo-frame-ring {
+    width: 210px !important;
+    height: 210px !important;
+  }
+  
+  .photo-glow-aura {
+    width: 230px !important;
+    height: 230px !important;
+  }
+  
+  .skills-wheel-container {
+    transform: scale(0.55);
+    margin-bottom: -150px;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .exp-role {
+    font-size: 1.05rem;
+  }
+}
+
+/* Base fixes to prevent text breaking and layout issues */
+.tech-pill, .status-badge, .floating-chip {
+  white-space: nowrap;
+}
+
+body, html {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  width: 100%;
+}

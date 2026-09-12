@@ -1,0 +1,3 @@
+INSERT INTO projects (title, description, tags, github_url, demo_url) VALUES
+('Nexus Analytics Platform', 'A high-performance dashboard for real-time data visualization, built with Next.js and Tremor, for smooth rendering of complex datasets.', 'React, Python, Tremor.js', 'https://github.com/siddesh/nexus-analytics', 'https://nexus-analytics.demo.app'),
+('Aura E-Commerce', 'A headless e-commerce solution providing a seamless shopping experience with instant search, secure checkout, and dynamic inventory management.', 'React, PostgreSQL, Redux', 'https://github.com/siddesh/aura-ecommerce', 'https://aura-ecommerce.demo.app');
