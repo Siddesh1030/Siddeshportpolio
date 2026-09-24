@@ -337,17 +337,6 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
       {/* Sidebar Navigation */}
       <aside className="admin-sidebar">
         
-        {/* Brand */}
-        <div className="admin-sidebar-brand">
-          <div className="admin-brand-icon">
-            <Sparkles size={20} style={{ color: '#ffffff' }} />
-          </div>
-          <div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.5px' }}>SIDDESH CMS</div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', fontWeight: 600 }}>Portfolio Admin Panel</div>
-          </div>
-        </div>
-
         {/* Navigation Links */}
         <nav className="admin-nav-list">
           {menuItems.map((item) => {
@@ -375,7 +364,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.8rem' }}>
             <div className="admin-avatar-small">A</div>
             <div>
-              <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#ffffff' }}>Siddesh Admin</div>
+              <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#166534' }}>Siddesh Admin</div>
               <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)' }}>admin@siddesh.com</div>
             </div>
           </div>
@@ -394,7 +383,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
         {/* Header Bar */}
         <header className="admin-header-bar">
           <div>
-            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', textTransform: 'capitalize' }}>
+            <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#166534', textTransform: 'capitalize' }}>
               {activeTab === 'dashboard' ? 'Overview Dashboard' : `${activeTab} Management`}
             </h1>
             <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)' }}>
@@ -465,7 +454,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
 
               {/* Quick Action Banner */}
               <div className="admin-panel-card" style={{ marginTop: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.5rem' }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#166534', marginBottom: '0.5rem' }}>
                   👋 Welcome to your Portfolio CMS Dashboard
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1.2rem' }}>
@@ -491,15 +480,15 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
           {/* TAB 2: HOME / HERO */}
           {activeTab === 'home' && (
             <div className="admin-panel-card">
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534', marginBottom: '1.5rem' }}>
                 Hero & Home Section Configuration
               </h3>
 
               <form onSubmit={handleSaveHero}>
                 
                 {/* Profile Photo Manager (Upload, Edit, Delete) */}
-                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', padding: '1.2rem', marginBottom: '1.5rem' }}>
-                  <label className="form-label" style={{ color: '#a78bfa', fontWeight: 700, marginBottom: '0.8rem' }}>
+                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid #bbf7d0', borderRadius: '16px', padding: '1.2rem', marginBottom: '1.5rem' }}>
+                  <label className="form-label" style={{ color: '#16a34a', fontWeight: 700, marginBottom: '0.8rem' }}>
                     📸 Developer Profile Photo / Avatar Manager
                   </label>
 
@@ -508,10 +497,10 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                       <img
                         src={heroForm.profileImage}
                         alt="Profile"
-                        style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #8b5cf6', boxShadow: '0 0 15px rgba(139, 92, 246, 0.4)' }}
+                        style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #22c55e', boxShadow: '0 0 15px rgba(34, 197, 94, 0.4)' }}
                       />
                     ) : (
-                      <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'rgba(139, 92, 246, 0.2)', border: '2px dashed rgba(139, 92, 246, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a78bfa', fontWeight: 800, fontSize: '1.2rem' }}>
+                      <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'rgba(34, 197, 94, 0.2)', border: '2px dashed rgba(34, 197, 94, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#16a34a', fontWeight: 800, fontSize: '1.2rem' }}>
                         SID
                       </div>
                     )}
@@ -575,8 +564,8 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                 </div>
 
                 {/* Hero Title Editor (Line 1, Gradient Glow Line, Line 2 Suffix) */}
-                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', padding: '1.2rem', marginBottom: '1.2rem' }}>
-                  <label className="form-label" style={{ color: '#a78bfa', fontWeight: 700, marginBottom: '0.8rem' }}>
+                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid #bbf7d0', borderRadius: '16px', padding: '1.2rem', marginBottom: '1.2rem' }}>
+                  <label className="form-label" style={{ color: '#16a34a', fontWeight: 700, marginBottom: '0.8rem' }}>
                     ⚡ Main Hero Title Lines Editor (SIDDESH: Crafting the Future of the Web.)
                   </label>
 
@@ -593,7 +582,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                     </div>
 
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" style={{ color: '#a78bfa', fontWeight: 700 }}>Gradient Glowing Text</label>
+                      <label className="form-label" style={{ color: '#16a34a', fontWeight: 700 }}>Gradient Glowing Text</label>
                       <input
                         type="text"
                         placeholder="Future of the"
@@ -755,7 +744,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
             <div className="admin-panel-card">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                 <div>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff' }}>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534' }}>
                     Education Page Management (/education)
                   </h3>
                   <p style={{ fontSize: '0.82rem', color: '#cbd5e1', marginTop: '2px' }}>
@@ -822,8 +811,8 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                 </div>
 
                 {/* Academic Scores Grid */}
-                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', padding: '1.2rem', marginBottom: '1.2rem' }}>
-                  <label className="form-label" style={{ color: '#a78bfa', fontWeight: 700, marginBottom: '0.8rem' }}>
+                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid #bbf7d0', borderRadius: '16px', padding: '1.2rem', marginBottom: '1.2rem' }}>
+                  <label className="form-label" style={{ color: '#16a34a', fontWeight: 700, marginBottom: '0.8rem' }}>
                     🎓 Academic Performance Marks & CGPA
                   </label>
 
@@ -851,7 +840,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                     </div>
 
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" style={{ color: '#a78bfa', fontWeight: 700 }}>Current CGPA (Out of 10)</label>
+                      <label className="form-label" style={{ color: '#16a34a', fontWeight: 700 }}>Current CGPA (Out of 10)</label>
                       <input
                         type="text"
                         placeholder="7.79"
@@ -901,7 +890,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
           {activeTab === 'skills' && (
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff' }}>Skills Management</h3>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534' }}>Skills Management</h3>
                 
                 <button
                   onClick={() => {
@@ -921,18 +910,18 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                 <table className="admin-table">
                   <thead>
                     <tr>
-                      <th style={{ color: '#a78bfa' }}>Skill Name</th>
-                      <th style={{ color: '#a78bfa' }}>Category</th>
-                      <th style={{ color: '#a78bfa' }}>Proficiency %</th>
-                      <th style={{ color: '#a78bfa' }}>Actions</th>
+                      <th style={{ color: '#16a34a' }}>Skill Name</th>
+                      <th style={{ color: '#16a34a' }}>Category</th>
+                      <th style={{ color: '#16a34a' }}>Proficiency %</th>
+                      <th style={{ color: '#16a34a' }}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {portfolio.skills.map((skill) => (
                       <tr key={skill.id}>
-                        <td style={{ fontWeight: 700, color: '#ffffff' }}>{skill.name}</td>
+                        <td style={{ fontWeight: 700, color: '#166534' }}>{skill.name}</td>
                         <td>
-                          <span className="admin-table-chip" style={{ background: 'rgba(139, 92, 246, 0.15)', color: '#a78bfa' }}>{skill.category}</span>
+                          <span className="admin-table-chip" style={{ background: 'rgba(34, 197, 94, 0.15)', color: '#16a34a' }}>{skill.category}</span>
                         </td>
                         <td>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -968,7 +957,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
               <div className="admin-panel-card" style={{ marginTop: '2rem', background: 'rgba(18, 20, 32, 0.88)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
                   <div>
-                    <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <Wrench size={20} style={{ color: '#38bdf8' }} />
                       <span>Tools & Platforms I Use</span>
                     </h3>
@@ -1014,7 +1003,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                         key={toolObj.id || idx}
                         style={{
                           background: 'rgba(255, 255, 255, 0.04)',
-                          border: '1px solid rgba(255, 255, 255, 0.1)',
+                          border: '1px solid #bbf7d0',
                           borderRadius: '14px',
                           padding: '0.8rem 1rem',
                           display: 'flex',
@@ -1055,7 +1044,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                           </div>
                         ) : (
                           <>
-                            <span style={{ fontWeight: 700, color: '#ffffff', fontSize: '0.9rem' }}>
+                            <span style={{ fontWeight: 700, color: '#166534', fontSize: '0.9rem' }}>
                               {toolObj.name}
                             </span>
                             <div style={{ display: 'flex', gap: '0.3rem', flexShrink: 0 }}>
@@ -1121,7 +1110,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                     )}
 
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
-                      <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff' }}>{proj.title}</h4>
+                      <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534' }}>{proj.title}</h4>
                       <span className="admin-table-chip" style={{ background: proj.featured ? 'rgba(52, 211, 153, 0.15)' : 'rgba(255,255,255,0.06)', color: proj.featured ? '#34d399' : 'var(--text-secondary)' }}>
                         {proj.featured ? 'Featured' : 'Standard'}
                       </span>
@@ -1133,13 +1122,13 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
 
                     <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', marginBottom: '1.2rem' }}>
                       {proj.tags.map((t, i) => (
-                        <span key={i} style={{ background: 'rgba(139, 92, 246, 0.15)', border: '1px solid rgba(139, 92, 246, 0.3)', color: '#a78bfa', fontSize: '0.72rem', fontWeight: 700, padding: '2px 8px', borderRadius: '4px' }}>
+                        <span key={i} style={{ background: 'rgba(34, 197, 94, 0.15)', border: '1px solid rgba(34, 197, 94, 0.3)', color: '#16a34a', fontSize: '0.72rem', fontWeight: 700, padding: '2px 8px', borderRadius: '4px' }}>
                           {t}
                         </span>
                       ))}
                     </div>
 
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.8rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.8rem', borderTop: '1px solid #bbf7d0' }}>
                       <div style={{ fontSize: '0.78rem', color: '#60a5fa' }}>
                         Demo & Repo Configured
                       </div>
@@ -1179,7 +1168,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
           {activeTab === 'experience' && (
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff' }}>Work & Internship Experience</h3>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534' }}>Work & Internship Experience</h3>
                 
                 <button
                   onClick={() => {
@@ -1198,7 +1187,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                 <div key={exp.id} className="admin-panel-card" style={{ marginBottom: '1.2rem', background: 'rgba(18, 20, 32, 0.88)' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                     <div>
-                      <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff' }}>{exp.role}</h4>
+                      <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#166534' }}>{exp.role}</h4>
                       <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#60a5fa', margin: '2px 0 6px 0' }}>{exp.company}</div>
                       <div style={{ fontSize: '0.8rem', color: '#94a3b8', fontWeight: 600 }}>{exp.period}</div>
                     </div>
@@ -1299,22 +1288,22 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
           {/* TAB 9: SUBMISSIONS INBOX */}
           {activeTab === 'submissions' && (
             <div>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '1.2rem' }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534', marginBottom: '1.2rem' }}>
                 Contact Form Submissions Received ({contactSubmissions.length})
               </h3>
 
               {contactSubmissions.length === 0 ? (
                 <div className="admin-panel-card" style={{ textAlign: 'center', padding: '3rem', background: 'rgba(18, 20, 32, 0.88)' }}>
-                  <Inbox size={42} style={{ color: '#a78bfa', margin: '0 auto 0.8rem auto' }} />
-                  <div style={{ fontWeight: 700, color: '#ffffff' }}>No Contact Messages Yet</div>
+                  <Inbox size={42} style={{ color: '#16a34a', margin: '0 auto 0.8rem auto' }} />
+                  <div style={{ fontWeight: 700, color: '#166534' }}>No Contact Messages Yet</div>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>Submissions from public visitors will show up here.</p>
                 </div>
               ) : (
                 contactSubmissions.map((sub) => (
-                  <div key={sub.id} className="admin-panel-card" style={{ marginBottom: '1.2rem', background: 'rgba(18, 20, 32, 0.88)', border: '1px solid rgba(139, 92, 246, 0.25)' }}>
+                  <div key={sub.id} className="admin-panel-card" style={{ marginBottom: '1.2rem', background: 'rgba(18, 20, 32, 0.88)', border: '1px solid rgba(34, 197, 94, 0.25)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
                       <div>
-                        <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff' }}>{sub.name}</h4>
+                        <h4 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534' }}>{sub.name}</h4>
                         <div style={{ fontSize: '0.86rem', color: '#60a5fa', fontWeight: 600, marginTop: '2px' }}>
                           📧 {sub.email} • 📞 {sub.phone || 'N/A'}
                         </div>
@@ -1329,9 +1318,9 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                     </div>
 
                     {/* Detailed Data Box with Conditional Fields */}
-                    <div style={{ background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '14px', padding: '1rem 1.2rem' }}>
+                    <div style={{ background: 'rgba(255, 255, 255, 0.04)', border: '1px solid #bbf7d0', borderRadius: '14px', padding: '1rem 1.2rem' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.8rem' }}>
-                        <span className="admin-table-chip" style={{ background: 'rgba(139, 92, 246, 0.25)', color: '#a78bfa', fontWeight: 800, fontSize: '0.78rem' }}>
+                        <span className="admin-table-chip" style={{ background: 'rgba(34, 197, 94, 0.25)', color: '#16a34a', fontWeight: 800, fontSize: '0.78rem' }}>
                           STATUS: {(sub.userStatus || 'student').toUpperCase()}
                         </span>
                       </div>
@@ -1339,32 +1328,32 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
                       {/* Display All Collected User Data */}
                       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '0.6rem', fontSize: '0.86rem', color: '#cbd5e1', marginBottom: '0.8rem' }}>
                         {sub.collegeName && (
-                          <div>🏫 <strong>College:</strong> <span style={{ color: '#ffffff' }}>{sub.collegeName}</span></div>
+                          <div>🏫 <strong>College:</strong> <span style={{ color: '#166534' }}>{sub.collegeName}</span></div>
                         )}
                         {sub.branch && (
-                          <div>🎓 <strong>Branch:</strong> <span style={{ color: '#ffffff' }}>{sub.branch}</span></div>
+                          <div>🎓 <strong>Branch:</strong> <span style={{ color: '#166534' }}>{sub.branch}</span></div>
                         )}
                         {sub.currentSemester && (
-                          <div>📚 <strong>Semester:</strong> <span style={{ color: '#ffffff' }}>{sub.currentSemester}</span></div>
+                          <div>📚 <strong>Semester:</strong> <span style={{ color: '#166534' }}>{sub.currentSemester}</span></div>
                         )}
 
                         {String(sub.userStatus).toLowerCase() !== 'student' && sub.companyName && (
-                          <div>🏢 <strong>Company:</strong> <span style={{ color: '#ffffff' }}>{sub.companyName}</span></div>
+                          <div>🏢 <strong>Company:</strong> <span style={{ color: '#166534' }}>{sub.companyName}</span></div>
                         )}
                         {String(sub.userStatus).toLowerCase() !== 'student' && sub.role && (
-                          <div>💼 <strong>Role:</strong> <span style={{ color: '#ffffff' }}>{sub.role}</span></div>
+                          <div>💼 <strong>Role:</strong> <span style={{ color: '#166534' }}>{sub.role}</span></div>
                         )}
                         {String(sub.userStatus).toLowerCase() !== 'student' && sub.experience && (
-                          <div>⏳ <strong>Experience:</strong> <span style={{ color: '#ffffff' }}>{sub.experience}</span></div>
+                          <div>⏳ <strong>Experience:</strong> <span style={{ color: '#166534' }}>{sub.experience}</span></div>
                         )}
 
                         {sub.graduatedYear && (
-                          <div>🎓 <strong>Graduation Year:</strong> <span style={{ color: '#ffffff' }}>{sub.graduatedYear}</span></div>
+                          <div>🎓 <strong>Graduation Year:</strong> <span style={{ color: '#166534' }}>{sub.graduatedYear}</span></div>
                         )}
                       </div>
 
                       {/* Full Message Body */}
-                      <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '0.65rem', marginTop: '0.65rem', fontSize: '0.9rem', color: '#ffffff', lineHeight: 1.6 }}>
+                      <div style={{ borderTop: '1px solid #bbf7d0', paddingTop: '0.65rem', marginTop: '0.65rem', fontSize: '0.9rem', color: '#166534', lineHeight: 1.6 }}>
                         <div style={{ fontSize: '0.74rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '3px' }}>VISITOR MESSAGE:</div>
                         <div>"{sub.message}"</div>
                       </div>
@@ -1378,19 +1367,19 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
           {/* TAB 10: RESUME */}
           {activeTab === 'resume' && (
             <div className="admin-panel-card">
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534', marginBottom: '1.5rem' }}>
                 📄 Resume CV Document File Manager & Download Settings
               </h3>
 
               {/* Resume File Upload Box */}
-              <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px dashed rgba(139, 92, 246, 0.4)', borderRadius: '16px', padding: '1.5rem', marginBottom: '1.8rem' }}>
+              <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px dashed rgba(34, 197, 94, 0.4)', borderRadius: '16px', padding: '1.5rem', marginBottom: '1.8rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.2rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <div style={{ width: '50px', height: '50px', borderRadius: '14px', background: 'rgba(139, 92, 246, 0.2)', border: '1px solid rgba(139, 92, 246, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a78bfa' }}>
+                    <div style={{ width: '50px', height: '50px', borderRadius: '14px', background: 'rgba(34, 197, 94, 0.2)', border: '1px solid rgba(34, 197, 94, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#16a34a' }}>
                       <FileText size={26} />
                     </div>
                     <div>
-                      <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#ffffff' }}>
+                      <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#166534' }}>
                         {resumeForm.fileName || 'Siddesh_Resume.pdf'}
                       </div>
                       <div style={{ fontSize: '0.8rem', color: resumeForm.downloadUrl && resumeForm.downloadUrl !== '#resume' ? '#34d399' : '#fb923c', fontWeight: 700, marginTop: '3px' }}>
@@ -1519,13 +1508,13 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
               </div>
 
               {/* Project Image Upload & Delete Manager */}
-              <div className="form-group" style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                <label className="form-label" style={{ color: '#a78bfa', fontWeight: 700 }}>
+              <div className="form-group" style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '1rem', borderRadius: '12px', border: '1px solid #bbf7d0' }}>
+                <label className="form-label" style={{ color: '#16a34a', fontWeight: 700 }}>
                   🖼️ Project Thumbnail Cover Image
                 </label>
 
                 {projectInput.image && (
-                  <div style={{ position: 'relative', width: '100%', height: '140px', marginBottom: '0.8rem', borderRadius: '10px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
+                  <div style={{ position: 'relative', width: '100%', height: '140px', marginBottom: '0.8rem', borderRadius: '10px', overflow: 'hidden', border: '1px solid #bbf7d0' }}>
                     <img src={projectInput.image} alt="Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <button
                       type="button"
@@ -1614,7 +1603,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
               <X size={18} />
             </button>
 
-            <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', marginBottom: '1.2rem' }}>
+            <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#166534', marginBottom: '1.2rem' }}>
               {editingSkill === 'new' ? 'Add New Skill' : 'Edit Skill'}
             </h3>
 
@@ -1680,7 +1669,7 @@ export default function AdminDashboard({ onLogout, onNavigateToPublic }) {
               <X size={18} />
             </button>
 
-            <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', marginBottom: '1.2rem' }}>
+            <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#166534', marginBottom: '1.2rem' }}>
               {editingExp === 'new' ? 'Add Experience Entry' : 'Edit Experience Entry'}
             </h3>
 

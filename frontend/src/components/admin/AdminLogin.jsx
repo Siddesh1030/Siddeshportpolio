@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { ShieldCheck, Lock, User, ArrowLeft, KeyRound, AlertCircle } from 'lucide-react';
 
 export default function AdminLogin({ onLoginSuccess, onBackToPortfolio }) {
-  const [username, setUsername] = useState('admin');
-  const [password, setPassword] = useState('admin123password');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
@@ -15,7 +15,7 @@ export default function AdminLogin({ onLoginSuccess, onBackToPortfolio }) {
         return;
       }
     }
-    setError('Invalid username or password. Please use default credentials shown below.');
+    setError('Invalid username or password.');
   };
 
   return (
@@ -39,10 +39,10 @@ export default function AdminLogin({ onLoginSuccess, onBackToPortfolio }) {
         {/* Header Icon & Title */}
         <div style={{ textAlign: 'center', margin: '1.2rem 0 2rem 0' }}>
           <div className="admin-login-icon-badge">
-            <ShieldCheck size={32} style={{ color: '#8b5cf6' }} />
+            <ShieldCheck size={32} style={{ color: '#16a34a' }} />
           </div>
           
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.4rem' }}>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#166534', marginBottom: '0.4rem' }}>
             Portfolio CMS Admin
           </h2>
           
@@ -102,14 +102,7 @@ export default function AdminLogin({ onLoginSuccess, onBackToPortfolio }) {
         </form>
 
         {/* Default Credential Notice Box */}
-        <div className="admin-credentials-hint-box">
-          <div style={{ fontWeight: 700, color: '#a78bfa', marginBottom: '4px', fontSize: '0.82rem' }}>
-            🔑 Default Administrator Access:
-          </div>
-          <div>Username: <code style={{ background: 'rgba(139, 92, 246, 0.2)', padding: '2px 6px', borderRadius: '4px', color: '#38bdf8' }}>admin</code></div>
-          <div>Password: <code style={{ background: 'rgba(139, 92, 246, 0.2)', padding: '2px 6px', borderRadius: '4px', color: '#38bdf8' }}>admin123password</code></div>
-        </div>
-
+        
       </div>
     </div>
   );

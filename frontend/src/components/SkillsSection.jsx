@@ -161,13 +161,40 @@ export default function SkillsSection() {
                     <div className="skill-bar-content">
                       <div className="skill-bar-top">
                         <span className="skill-bar-name">{sk.name}</span>
-                        <span className="skill-bar-percentage">{sk.percentage}%</span>
+                        <span className="skill-bar-percentage" style={{
+                          color: (sk.name.toLowerCase().includes('java') && !sk.name.toLowerCase().includes('script')) ? '#ea580c' :
+                                 (sk.name.toLowerCase().includes('python')) ? '#eab308' :
+                                 (sk.name.toLowerCase().includes('javascript')) ? '#facc15' :
+                                 (sk.name.toLowerCase().includes('react')) ? '#22d3ee' :
+                                 (sk.name.toLowerCase().includes('spring')) ? '#22c55e' :
+                                 (sk.name.toLowerCase().includes('mysql') || sk.name.toLowerCase().includes('sql')) ? '#8b5cf6' :
+                                 (sk.name.toLowerCase().includes('html')) ? '#f97316' :
+                                 (sk.name.toLowerCase().includes('css')) ? '#3b82f6' : '#a78bfa'
+                        }}>{sk.percentage}%</span>
                       </div>
 
                       <div className="skill-progress-track">
                         <div
                           className="skill-progress-fill"
-                          style={{ width: `${sk.percentage}%` }}
+                          style={{
+                            width: `${sk.percentage}%`,
+                            background: (sk.name.toLowerCase().includes('java') && !sk.name.toLowerCase().includes('script')) ? 'linear-gradient(90deg, #ef4444 0%, #ea580c 100%)' :
+                                        (sk.name.toLowerCase().includes('python')) ? 'linear-gradient(90deg, #3b82f6 0%, #eab308 100%)' :
+                                        (sk.name.toLowerCase().includes('javascript')) ? 'linear-gradient(90deg, #facc15 0%, #eab308 100%)' :
+                                        (sk.name.toLowerCase().includes('react')) ? 'linear-gradient(90deg, #0ea5e9 0%, #22d3ee 100%)' :
+                                        (sk.name.toLowerCase().includes('spring')) ? 'linear-gradient(90deg, #10b981 0%, #22c55e 100%)' :
+                                        (sk.name.toLowerCase().includes('mysql') || sk.name.toLowerCase().includes('sql')) ? 'linear-gradient(90deg, #6366f1 0%, #a855f7 100%)' :
+                                        (sk.name.toLowerCase().includes('html')) ? 'linear-gradient(90deg, #f97316 0%, #ef4444 100%)' :
+                                        (sk.name.toLowerCase().includes('css')) ? 'linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%)' : undefined,
+                            boxShadow: (sk.name.toLowerCase().includes('java') && !sk.name.toLowerCase().includes('script')) ? '0 0 10px rgba(239, 68, 68, 0.6)' :
+                                       (sk.name.toLowerCase().includes('python')) ? '0 0 10px rgba(59, 130, 246, 0.6)' :
+                                       (sk.name.toLowerCase().includes('javascript')) ? '0 0 10px rgba(250, 204, 21, 0.6)' :
+                                       (sk.name.toLowerCase().includes('react')) ? '0 0 10px rgba(34, 211, 238, 0.6)' :
+                                       (sk.name.toLowerCase().includes('spring')) ? '0 0 10px rgba(34, 197, 94, 0.6)' :
+                                       (sk.name.toLowerCase().includes('mysql') || sk.name.toLowerCase().includes('sql')) ? '0 0 10px rgba(168, 85, 247, 0.6)' :
+                                       (sk.name.toLowerCase().includes('html')) ? '0 0 10px rgba(249, 115, 22, 0.6)' :
+                                       (sk.name.toLowerCase().includes('css')) ? '0 0 10px rgba(59, 130, 246, 0.6)' : undefined
+                          }}
                         ></div>
                       </div>
                     </div>
